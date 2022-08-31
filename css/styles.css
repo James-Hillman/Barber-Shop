@@ -42,7 +42,7 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 10px 10px;
-  grid-auto-flow: row;
+  
   grid-template-areas:
     "Hero Hero Hero Hero Hero Hero"
     "Hero Hero Hero Hero Hero Hero"
@@ -62,6 +62,7 @@
 
 .Hero {
   grid-area: Hero;
+  
 }
 
 .barber {
@@ -69,9 +70,14 @@
   background: var(--light-brown);
   height: 40em;
   width: 100%;
+  align-content: center;
+  display: grid
   }
 
-  
+.barber-text {
+  place-items: center;
+  text-align: center;
+}  
 
 
 
