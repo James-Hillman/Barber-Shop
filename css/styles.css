@@ -1,0 +1,125 @@
+:root {
+    --light-brown: #b4b3ad;
+    --med-brown: #4d4726;
+    --dark-brown: #383735;
+    --lightest-navy: #233554;
+    --darkest-brown: rgba(12, 10, 1, 0.7);
+    --dark-slate: #495670;
+    --gold: #b9a56e;
+    --gold2: #96875b;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --black: black;
+    --font-fat-face: "Abril Fatface", cursive;
+    --font-Barlow: "Barlow", sans-serif;
+    --font-Rye: 'Rye', cursive;                     /*GET FONTS FROM GOOGLE*/                                
+    --font-Noto: "Noto Serif", serif;
+    --font-Lato: "Lato", sans-serif;
+    --font-x-sm: 14px;
+    --font-xxs: 12px;
+    --font-sm: 18px;
+    --font-md: 22px;
+    --font-lg: 30px;
+    --font-xl: 36px;
+    --font-xxl: 56px;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-Noto);
+    font-weight: 100;
+  }
+  html,
+  body {
+    background: var(--dark-brown);
+    scroll-behavior: smooth;
+  }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Hero Hero Hero Hero Hero Hero"
+    "Hero Hero Hero Hero Hero Hero"
+    "Barber Barber Cut-Like-Pros Cut-Like-Pros Location Location"
+    "Barber Barber Cut-Like-Pros Cut-Like-Pros Location Location"
+    "Fill-Picture Mid-Banner Mid-Banner Mid-Banner Mid-Banner Fill-Picture-2"
+    "Fill-Picture Mid-Banner Mid-Banner Mid-Banner Mid-Banner Fill-Picture-2"
+    "Fill-Picture Mid-Banner Mid-Banner Mid-Banner Mid-Banner Fill-Picture-2"
+    ". Services Services Services Services ."
+    ". Services Services Services Services ."
+    "Reviews Reviews Reviews Reviews Reviews Reviews"
+    "Reviews Reviews Reviews Reviews Reviews Reviews"
+    "Area-Map Area-Map Area-Map Area-Map Area-Map Area-Map"
+    "Footer Footer Footer Footer Footer Footer"
+    "Footer Footer Footer Footer Footer Footer";
+}
+
+.Hero {
+  grid-area: Hero;
+}
+
+.barber {
+  grid-area: Barber;
+  background: var(--light-brown);
+  height: 40em;
+  width: 100%;
+  }
+
+  
+
+
+
+.Cut-Like-Pros {
+  grid-area: Cut-Like-Pros;
+  background: var(--lightest-slate);
+  height: 40em;
+  width: 100%;
+}
+
+.Location {
+  grid-area: Location;
+  background: var(--light-brown);
+  height: 40em;
+  width: 100%;
+}
+
+.Fill-Picture {
+  grid-area: Fill-Picture;
+  background: green;
+}
+
+.Mid-Banner {
+  grid-area: Mid-Banner;
+  background: yellow;
+}
+
+.Fill-Picture-2 {
+  grid-area: Fill-Picture-2;
+  background: #96875b;
+}
+
+.Services {
+  grid-area: Services;
+  background: blue;
+}
+
+.Reviews {
+  grid-area: Reviews;
+  background: purple;
+}
+
+.Area-Map {
+  grid-area: Area-Map;
+  background: olive;
+}
+
+.Footer {
+  grid-area: Footer;
+  background: pink;
+}
