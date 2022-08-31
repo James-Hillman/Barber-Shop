@@ -4,45 +4,107 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css" />
     <title>Barber Shop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
+    <!-- Navigation Menu -->
+
+    <nav class="navigation">
+      <div class="nav-logo">
+        <img src="./images/dummy-logo.jpg" width="80" alt="" />
+      </div>
+      <ul class="nav-menu">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+      <div class="nav-toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+    </nav>
+    <div class="nav-overlay"></div>
+
+    <!-- Grid Container  -->
+
     <div class="container">
       <div class="Hero"></div>
 
       <div class="barber">
         <div class="barber-text">
-            <h2>The Barber</h2>
-            <p class="sub-header">24 Year Old Barber.</p>
-            <p class="sub-text">Born and raised in Sedgley.</p>
+          <h2>The Barber</h2>
+          <p class="sub-header">24 Year Old Barber.</p>
+          <p class="sub-text">Born and raised in Sedgley.</p>
         </div>
       </div>
 
       <div class="Cut-Like-Pros">
-        <h2>We cut like pro's.</h2>
-        <p>
-          Morgan's is a contemporary Barbershop offers all the frills and
-          service you would expect from a superior salon, but with a focus on an
-          informal atmosphere. Haircuts are classic, creative or modern, and cut
-          with precision.
-        </p>
+        <div class="Cut-Like-Pros-text">
+          <h2>We cut like pro's.</h2>
+          <p>
+            Morgan's is a contemporary Barbershop offers all the frills and
+            service you would expect from a superior salon, but with a focus on
+            an informal atmosphere. Haircuts are classic, creative or modern,
+            and cut with precision.
+          </p>
+        </div>
       </div>
 
-      <div class="Location"><h2>Location</h2>
-        <p>
-          80 Parkes Hall Road, <br />Dudley, <br />
-          West Midlands <br />DY1 3RW
-        </p>
-    </div>
-    
+      <div class="Location">
+        <div class="Location-text">
+          <h2>Location</h2>
+          <p>
+            80 Parkes Hall Road, <br />Dudley, <br />
+            West Midlands <br />DY1 3RW
+          </p>
+        </div>
+      </div>
+
       <div class="Fill-Picture"></div>
       <div class="Mid-Banner"></div>
       <div class="Fill-Picture-2"></div>
-      <div class="Services"></div>
+
+      <div class="Services">
+        <h1>OUR SERVICES</h1>
+
+        <container class="services-sub-grid">
+          <div class="wet-shave-sub-grid-text">
+            <h2>WET SHAVES</h2>
+            <div class="shave-pic"></div>
+            <p class="service-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint,
+              nam.
+            </p>
+          </div>
+
+          <div class="haircut-sub-grid-text">
+            <h2>HAIRCUT</h2>
+            <div class="shave-pic"></div>
+            <p class="service-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint,
+              nam.
+            </p>
+          </div>
+
+          <div class="beard-sub-grid-text">
+            <h2>BEARD TRIMS</h2>
+            <div class="shave-pic"></div>
+            <p class="service-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint,
+              nam.
+            </p>
+          </div>
+        </container>
+      </div>
+
       <div class="Reviews"></div>
       <div class="Area-Map"></div>
       <div class="Footer"></div>
     </div>
+
+    <script src="/js/main.js"></script>
   </body>
 </html>

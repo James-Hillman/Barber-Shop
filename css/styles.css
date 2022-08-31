@@ -11,19 +11,30 @@
     --lightest-slate: #ccd6f6;
     --white: #e6f1ff;
     --black: black;
+
+/* ——————————————————————————————
+ VARIABLES - FONT SIZE & FAMILY
+-—————————————————————————————— */   
+
     --font-fat-face: "Abril Fatface", cursive;
     --font-Barlow: "Barlow", sans-serif;
-    --font-Rye: 'Rye', cursive;                     /*GET FONTS FROM GOOGLE*/                                
+    --font-Rye: 'Rye', cursive;                    
     --font-Noto: "Noto Serif", serif;
     --font-Lato: "Lato", sans-serif;
-    --font-x-sm: 14px;
-    --font-xxs: 12px;
-    --font-sm: 18px;
-    --font-md: 22px;
-    --font-lg: 30px;
-    --font-xl: 36px;
-    --font-xxl: 56px;
+    --font-xxs: 0.6em;
+    --font-xs: 0.8em;
+    --font-sm: 1em;
+    --font-md: 1.4em;
+    --font-lg: 1.8em;
+    --font-xl: 2.8em;
+    --font-xxl: 4em;
   }
+
+
+/* ——————————————————————————————
+     GENERAL - STYLING
+—————————————————————————————— */
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -33,17 +44,132 @@
   }
   html,
   body {
-    background: var(--dark-brown);
+    background: var(--white);
     scroll-behavior: smooth;
   }
+
+
+
+  /* ——————————————————————————————
+                NAV
+—————————————————————————————— */
+
+nav.navigation{
+	position:relative;
+	height:50px;
+    align-items:center;
+    position: fixed;
+    width: 100%;
+    z-index: 9998;
+    background: var(--white);
+}
+.nav-logo{
+	float:left;
+}
+ul.nav-menu, ul.nav-menu li, ul.nav-menu li a{
+	float:left;
+    list-style: none;
+    align-items: center;
+}
+ul.nav-menu{
+	padding-left:10px;
+    padding-top: 50px;
+}
+ul.nav-menu li a{
+	height:50px;
+	padding:0 10px;
+	color: var(--black);
+	text-decoration:none;
+	-webkit-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+ul.nav-menu li a:hover{
+	color: var(--white);
+}
+.nav-toggle{
+	display:none;
+	position:absolute;
+	top:0;
+	right:0;
+	width:50px;
+	height:50px;
+	cursor:pointer;
+}
+span.icon-bar{
+	position:absolute;
+	right:32px;
+	display:block;
+	width:26px;
+	height:2px;
+	background-color:black;
+	-webkit-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+.icon-bar:nth-child(1){
+  top:17px;
+}
+.icon-bar:nth-child(2){
+  top:24px;
+}
+.icon-bar:nth-child(3){
+  top:31px;
+}
+.nav-overlay{
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background-color:var(--white);
+	z-index:1;
+	opacity:0;
+	visibility:hidden;
+	-webkit-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+.nav-overlay.active{
+	opacity:1;
+	visibility:visible;
+}
+
+/* ——————————————————————————————
+    ICON BARS NAVIGATION
+—————————————————————————————— */
+
+.nav-toggle.active .icon-bar:nth-child(1){
+	top:24px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.nav-toggle.active .icon-bar:nth-child(2){
+	width:0;
+}
+.nav-toggle.active .icon-bar:nth-child(3){
+	top:24px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+
+
+
+
+  /* ——————————————————————————————
+    Body Container - Grid layout
+—————————————————————————————— */
 
 .container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 10px 10px;
-  
+  grid-template-rows: repeat(14, 1fr);
   grid-template-areas:
+    "Hero Hero Hero Hero Hero Hero"
+    "Hero Hero Hero Hero Hero Hero"
     "Hero Hero Hero Hero Hero Hero"
     "Hero Hero Hero Hero Hero Hero"
     "Barber Barber Cut-Like-Pros Cut-Like-Pros Location Location"
@@ -62,13 +188,17 @@
 
 .Hero {
   grid-area: Hero;
-  
+  background-image: url(/images/hero.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
 }
 
 .barber {
   grid-area: Barber;
   background: var(--light-brown);
-  height: 40em;
+  height: 30em;
   width: 100%;
   align-content: center;
   display: grid
@@ -84,48 +214,208 @@
 .Cut-Like-Pros {
   grid-area: Cut-Like-Pros;
   background: var(--lightest-slate);
-  height: 40em;
+  height: 30em;
   width: 100%;
+  align-content: center;
+  display: grid
+}
+
+.Cut-Like-Pros-text {
+  place-items: center;
+  text-align: center;
+  padding: 2em;
 }
 
 .Location {
   grid-area: Location;
   background: var(--light-brown);
-  height: 40em;
+  height: 30em;
   width: 100%;
+  align-content: center;
+  display: grid
+}
+
+.Location-text {
+  place-items: center;
+  text-align: center;
+  padding: 1em;
 }
 
 .Fill-Picture {
   grid-area: Fill-Picture;
-  background: green;
+  background-image: url(/images/fill-picture1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
 }
 
 .Mid-Banner {
   grid-area: Mid-Banner;
   background: yellow;
+  align-content: center;
+  display: grid
 }
 
 .Fill-Picture-2 {
   grid-area: Fill-Picture-2;
   background: #96875b;
+  align-content: center;
+  display: grid;
+  height: 50vh;
 }
 
 .Services {
   grid-area: Services;
-  background: blue;
+  align-content: center;
+  background: var(--light-slate);
+  padding: 4em 0;
 }
+
+.Services h1 {
+  text-align: center;
+  padding: 2em;
+}
+
+.services-sub-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+}
+
+.wet-shave-sub-grid-text {
+  grid-column: 1 / 2 ;
+  place-items: center;
+  padding: 1em;
+  text-align: center;
+}
+
+.haircut-sub-grid-text {
+  grid-column: 2 / 3 ;
+  place-items: center;
+  padding: 1em;
+  text-align: center;
+}
+
+.beard-sub-grid-text {
+  grid-column: 3 / 4 ;
+  place-items: center;
+  padding: 1em;
+  text-align: center;
+}
+
+
+
 
 .Reviews {
   grid-area: Reviews;
   background: purple;
+  align-content: center;
+  display: grid
 }
 
 .Area-Map {
   grid-area: Area-Map;
   background: olive;
+  align-content: center;
+  display: grid
 }
 
 .Footer {
   grid-area: Footer;
   background: pink;
+  align-content: center;
+  display: grid
+}
+
+
+
+
+
+
+
+/* ——————————————————————————————————-
+     MEDIA QUERIES - MOBILE DEVICES
+————————————————————————————————————— */
+
+
+
+/* ------- Navigation Menu ------- */
+
+@media screen and (max-width:900px){
+	ul.nav-menu{
+		position:absolute;
+		top:50px;
+		width:100%;
+		height:0;
+		padding:0;
+		overflow:hidden;
+	}
+	ul.nav-menu.active{
+		height:auto;
+	}
+	ul.nav-menu li{
+		width:100%;
+	}
+	ul.nav-menu li a{
+		width:100%;
+		padding:20px 0;
+		text-align:center;
+		background-color: var(--white); /* background of toggle menu */
+	}
+	ul.nav-menu li a:hover{
+		background-color:var(--white);
+	}
+	.nav-toggle{
+		display:block;
+	}
+}
+@media screen and (max-width:768px){
+	.nav-overlay.active{
+		visibility:hidden;
+		opacity:0;
+	}
+
+
+
+/* ------- Grid Container ------- */
+
+.container {
+  display: block;
+}
+
+.services-sub-grid {
+  display: block;
+}
+
+
+}
+
+
+
+
+
+
+/* ———————————————————————————————————————-
+     MEDIA QUERIES - SMALL TABLET STYLES
+——————————————————————————————————————————- */
+
+@media screen and (min-width:800px) {
+    
+    
+}
+
+
+
+
+
+
+/* ———————————————————————————————————————-
+     MEDIA QUERIES - LARGE TABLETS & LAPTOP  STYLES
+——————————————————————————————————————————- */
+
+@media screen and (min-width:1100px) {
+    
+    
 }
