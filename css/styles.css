@@ -166,24 +166,21 @@ span.icon-bar{
 .container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(14, 1fr);
+  grid-template-rows: repeat(7, 1fr);
   grid-template-areas:
     "Hero Hero Hero Hero Hero Hero"
-    "Hero Hero Hero Hero Hero Hero"
-    "Hero Hero Hero Hero Hero Hero"
-    "Hero Hero Hero Hero Hero Hero"
+    
     "Barber Barber Cut-Like-Pros Cut-Like-Pros Location Location"
-    "Barber Barber Cut-Like-Pros Cut-Like-Pros Location Location"
+
     "Fill-Picture Mid-Banner Mid-Banner Mid-Banner Mid-Banner Fill-Picture-2"
-    "Fill-Picture Mid-Banner Mid-Banner Mid-Banner Mid-Banner Fill-Picture-2"
-    "Fill-Picture Mid-Banner Mid-Banner Mid-Banner Mid-Banner Fill-Picture-2"
+
     ". Services Services Services Services ."
-    ". Services Services Services Services ."
+
     "Reviews Reviews Reviews Reviews Reviews Reviews"
-    "Reviews Reviews Reviews Reviews Reviews Reviews"
+
     "Area-Map Area-Map Area-Map Area-Map Area-Map Area-Map"
     "Footer Footer Footer Footer Footer Footer"
-    "Footer Footer Footer Footer Footer Footer";
+   
 }
 
 .Hero {
@@ -191,7 +188,7 @@ span.icon-bar{
   background-image: url(/images/hero.jpg);
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   background-position: center;
 }
 
@@ -246,7 +243,7 @@ span.icon-bar{
   background-image: url(/images/fill-picture1.jpg);
   background-size: cover;
   background-position: center;
-  height: 50vh;
+  grid-row: 3 / 5;
 }
 
 .Mid-Banner {
