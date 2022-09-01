@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
 :root {
   --light-brown: #b4b3ad;
   --med-brown: #4d4726;
@@ -25,8 +28,11 @@
   --font-xxs: 0.6em;
   --font-xs: 0.8em;
   --font-sm: 1em;
+  --font-smm: 1.2em;
   --font-md: 1.4em;
+  --font-ml: 1.6em;
   --font-lg: 1.8em;
+  --font-lgx: 2.2em;
   --font-xl: 2.8em;
   --font-xxl: 5em;
 }
@@ -43,7 +49,6 @@
 }
 html,
 body {
-  background: var(--white);
   scroll-behavior: smooth;
 }
 
@@ -53,12 +58,13 @@ body {
 
 nav.navigation {
   position: relative;
-  height: 50px;
+  height: 5em;
   align-items: center;
   position: fixed;
   width: 100%;
   z-index: 9998;
-  background: var(--white);
+  background: var(--gold);
+
 }
 
 ul.nav-menu,
@@ -67,19 +73,21 @@ ul.nav-menu li a {
   float: left;
   list-style: none;
   align-items: center;
+  font-size: var(--font-smm);
+
 }
 ul.nav-menu {
   padding-left: 10px;
-  padding-top: 1em;
+  padding-top: 10px;
 }
 ul.nav-menu li a {
-  height: 50px;
   padding: 0 10px;
   color: var(--black);
   text-decoration: none;
   -webkit-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  font-weight: bold;
 }
 ul.nav-menu li a:hover {
   color: var(--white);
@@ -119,7 +127,7 @@ span.icon-bar {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: var(--white);
+  background-color: var(--gold);
   z-index: 1;
   opacity: 0;
   visibility: hidden;
@@ -158,8 +166,8 @@ span.icon-bar {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr);
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -172,7 +180,6 @@ span.icon-bar {
     "article footer footer footer footer article-2";
 }
 
-
 /* ——————————————————————————————————-
               HERO
 ————————————————————————————————————— */
@@ -182,20 +189,20 @@ span.icon-bar {
   background-image: url(/images/hero.jpg);
   background-position: center;
   background-size: cover;
-  height: 70vh;
+  height: 100vh;
   display: grid;
   place-content: center;
 }
 
- .hero h1 {
+.hero h1 {
   color: var(--white);
-  font-size: var(--font-xxl);  
+  font-size: var(--font-lgx);
   text-align: center;
 }
 
 .hero h3 {
   color: var(--white);
-  font-size: var(--font-lg);
+  font-size: var(--font-sm);
   text-align: center;
 }
 
@@ -211,18 +218,16 @@ span.icon-bar {
   height: 70vh;
 }
 
-.barber-text
-h2 {
+.barber-text h2 {
   text-align: center;
-  font-size: var(--font-lg);
+  font-size: var(--font-md);
   padding: 1em;
   color: var(--gold2);
 }
 
-.barber-text
-p {
+.barber-text p {
   text-align: center;
-  font-size: var(--font-md);
+  font-size: var(--font-sm);
   color: var(--white);
 }
 
@@ -232,19 +237,19 @@ p {
   display: grid;
   place-items: center;
   height: 70vh;
-  padding: 3em;
+  padding: 1em;
 }
 
 .cut-like-pros-text h2 {
   text-align: center;
-  font-size: var(--font-lg);
+  font-size: var(--font-md);
   padding: 1em;
   color: var(--gold2);
 }
 
 .cut-like-pros-text p {
   text-align: center;
-  font-size: var(--font-md);
+  font-size: var(--font-sm);
   color: var(--dark-brown);
 }
 
@@ -256,21 +261,18 @@ p {
   height: 70vh;
 }
 
-.location-text h2
-{
+.location-text h2 {
   text-align: center;
-  font-size: var(--font-lg);
+  font-size: var(--font-md);
   padding: 1em;
   color: var(--gold2);
 }
 
-.location-text p
-{
+.location-text p {
   text-align: center;
-  font-size: var(--font-md);
+  font-size: var(--font-sm);
   color: var(--white);
 }
-
 
 /* ——————————————————————————————————-
           FILL PICTURE 1
@@ -282,8 +284,7 @@ p {
   background-position: center;
   background-size: cover;
   opacity: 0.8;
-  }
-
+}
 
 /* ——————————————————————————————————-
           FILL PICTURE 2
@@ -303,6 +304,47 @@ p {
 
 .secondary-about {
   grid-area: secondary-about;
+  height: 800px;
+  background-color: var(--gold);
+  
+}
+
+.secondary-about h2 {
+  font-size: var(--font-sm);
+  text-transform: capitalize;
+  padding: 20px;
+  text-align: center;
+  color: var(--dark-brown);
+  font-weight: bold;
+}
+
+
+
+.secondary-container-text img {
+  height: 30vh;
+  margin: auto;
+  display: block;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.36);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.36);
+  margin-bottom: 0em;
+}
+
+
+
+
+
+.secondary-container-text p {
+  padding: 1em;
+  margin: 2em 3em ;
+  text-align: center;
+  font-size: var(--font-sm);
+}
+
+.secondary-container-text-2 p {
+  padding: 3em;
+  margin-bottom: 3em;
+  text-align: center;
+  font-size: var(--font-sm);
 }
 
 /* ——————————————————————————————————-
@@ -311,6 +353,11 @@ p {
 
 .mid-banner {
   grid-area: mid-banner;
+  height: 400px;
+  background-image: url(/images/mid-banner.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
 }
 
 /* ——————————————————————————————————-
@@ -319,6 +366,7 @@ p {
 
 .services {
   grid-area: services;
+  height: 500px;
 }
 
 /* ——————————————————————————————————-
@@ -327,6 +375,7 @@ p {
 
 .article {
   grid-area: article;
+ 
 }
 
 /* ——————————————————————————————————-
@@ -335,6 +384,7 @@ p {
 
 .article-2 {
   grid-area: article-2;
+  
 }
 
 /* ——————————————————————————————————-
@@ -343,6 +393,7 @@ p {
 
 .reviews {
   grid-area: reviews;
+  height: 500px;
 }
 
 /* ——————————————————————————————————-
@@ -351,10 +402,8 @@ p {
 
 .footer {
   grid-area: footer;
+  height: 500px;
 }
-
-
-
 
 /* ——————————————————————————————————-
      MEDIA QUERIES - MOBILE DEVICES
@@ -379,13 +428,11 @@ p {
   }
   ul.nav-menu li a {
     width: 100%;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
-    background-color: var(--white); /* background of toggle menu */
+    background-color: var(--dark-brown); /* background of toggle menu */
   }
-  ul.nav-menu li a:hover {
-    background-color: var(--white);
-  }
+
   .nav-toggle {
     display: block;
   }
@@ -398,6 +445,21 @@ p {
 
   .container {
     display: block;
+  }
+
+  ul.nav-menu li a:hover {
+    color: var(--gold2);
+    opacity: 1;
+    
+  }
+
+  .secondary-about {
+    height: fit-content;
+  }
+
+  .secondary-container-text img {
+    width: 90%;
+    height: 70vh;
   }
 }
 
