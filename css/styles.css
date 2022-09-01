@@ -1,418 +1,342 @@
 :root {
-    --light-brown: #b4b3ad;
-    --med-brown: #4d4726;
-    --dark-brown: #383735;
-    --lightest-navy: #233554;
-    --darkest-brown: rgba(12, 10, 1, 0.7);
-    --dark-slate: #495670;
-    --gold: #b9a56e;
-    --gold2: #96875b;
-    --light-slate: #a8b2d1;
-    --lightest-slate: #ccd6f6;
-    --white: #e6f1ff;
-    --black: black;
+  --light-brown: #b4b3ad;
+  --med-brown: #4d4726;
+  --dark-brown: #383735;
+  --lightest-navy: #233554;
+  --darkest-brown: rgba(12, 10, 1, 0.7);
+  --dark-slate: #495670;
+  --gold: #b9a56e;
+  --gold2: #96875b;
+  --light-slate: #a8b2d1;
+  --lightest-orange: #a57743;
+  --medium-orange: #a36724;
+  --white: #e6f1ff;
+  --black: black;
 
-/* ——————————————————————————————
+  /* ——————————————————————————————
  VARIABLES - FONT SIZE & FAMILY
--—————————————————————————————— */   
+-—————————————————————————————— */
 
-    --font-fat-face: "Abril Fatface", cursive;
-    --font-Barlow: "Barlow", sans-serif;
-    --font-Rye: 'Rye', cursive;                    
-    --font-Noto: "Noto Serif", serif;
-    --font-Lato: "Lato", sans-serif;
-    --font-xxs: 0.6em;
-    --font-xs: 0.8em;
-    --font-sm: 1em;
-    --font-md: 1.4em;
-    --font-lg: 1.8em;
-    --font-xl: 2.8em;
-    --font-xxl: 4em;
-  }
-
+  --font-fat-face: "Abril Fatface", cursive;
+  --font-Barlow: "Barlow", sans-serif;
+  --font-Rye: "Rye", cursive;
+  --font-Noto: "Noto Serif", serif;
+  --font-Lato: "Lato", sans-serif;
+  --font-xxs: 0.6em;
+  --font-xs: 0.8em;
+  --font-sm: 1em;
+  --font-md: 1.4em;
+  --font-lg: 1.8em;
+  --font-xl: 2.8em;
+  --font-xxl: 4em;
+}
 
 /* ——————————————————————————————
      GENERAL - STYLING
 —————————————————————————————— */
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-Noto);
-    font-weight: 100;
-  }
-  html,
-  body {
-    background: var(--white);
-    scroll-behavior: smooth;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-Noto);
+}
+html,
+body {
+  background: var(--white);
+  scroll-behavior: smooth;
+}
 
-
-
-  /* ——————————————————————————————
+/* ——————————————————————————————
                 NAV
 —————————————————————————————— */
 
-nav.navigation{
-	position:relative;
-	height:50px;
-    align-items:center;
-    position: fixed;
-    width: 100%;
-    z-index: 9998;
-    background: var(--white);
+nav.navigation {
+  position: relative;
+  height: 50px;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 9998;
+  background: var(--white);
 }
-.nav-logo{
-	float:left;
+.nav-logo {
+  float: left;
 }
-ul.nav-menu, ul.nav-menu li, ul.nav-menu li a{
-	float:left;
-    list-style: none;
-    align-items: center;
+ul.nav-menu,
+ul.nav-menu li,
+ul.nav-menu li a {
+  float: left;
+  list-style: none;
+  align-items: center;
 }
-ul.nav-menu{
-	padding-left:10px;
-    padding-top: 50px;
+ul.nav-menu {
+  padding-left: 10px;
+  padding-top: 50px;
 }
-ul.nav-menu li a{
-	height:50px;
-	padding:0 10px;
-	color: var(--black);
-	text-decoration:none;
-	-webkit-transition-duration: 0.3s;
-	-o-transition-duration: 0.3s;
-	transition-duration: 0.3s;
+ul.nav-menu li a {
+  height: 50px;
+  padding: 0 10px;
+  color: var(--black);
+  text-decoration: none;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
-ul.nav-menu li a:hover{
-	color: var(--white);
+ul.nav-menu li a:hover {
+  color: var(--white);
 }
-.nav-toggle{
-	display:none;
-	position:absolute;
-	top:0;
-	right:0;
-	width:50px;
-	height:50px;
-	cursor:pointer;
+.nav-toggle {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
 }
-span.icon-bar{
-	position:absolute;
-	right:32px;
-	display:block;
-	width:26px;
-	height:2px;
-	background-color:black;
-	-webkit-transition-duration: 0.3s;
-	-o-transition-duration: 0.3s;
-	transition-duration: 0.3s;
+span.icon-bar {
+  position: absolute;
+  right: 32px;
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: black;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
-.icon-bar:nth-child(1){
-  top:17px;
+.icon-bar:nth-child(1) {
+  top: 17px;
 }
-.icon-bar:nth-child(2){
-  top:24px;
+.icon-bar:nth-child(2) {
+  top: 24px;
 }
-.icon-bar:nth-child(3){
-  top:31px;
+.icon-bar:nth-child(3) {
+  top: 31px;
 }
-.nav-overlay{
-	position:absolute;
-	top:0;
-	right:0;
-	bottom:0;
-	left:0;
-	background-color:var(--white);
-	z-index:1;
-	opacity:0;
-	visibility:hidden;
-	-webkit-transition-duration: 0.3s;
-	-o-transition-duration: 0.3s;
-	transition-duration: 0.3s;
+.nav-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--white);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
-.nav-overlay.active{
-	opacity:1;
-	visibility:visible;
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* ——————————————————————————————
     ICON BARS NAVIGATION
 —————————————————————————————— */
 
-.nav-toggle.active .icon-bar:nth-child(1){
-	top:24px;
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	transform: rotate(45deg);
+.nav-toggle.active .icon-bar:nth-child(1) {
+  top: 24px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-.nav-toggle.active .icon-bar:nth-child(2){
-	width:0;
+.nav-toggle.active .icon-bar:nth-child(2) {
+  width: 0;
 }
-.nav-toggle.active .icon-bar:nth-child(3){
-	top:24px;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	transform: rotate(-45deg);
+.nav-toggle.active .icon-bar:nth-child(3) {
+  top: 24px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
-
-
-
-
-  /* ——————————————————————————————
+/* ——————————————————————————————
     Body Container - Grid layout
 —————————————————————————————— */
 
 .container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
   grid-template-areas:
-    "Hero Hero Hero Hero Hero Hero"
-    
-    "Barber Barber Cut-Like-Pros Cut-Like-Pros Location Location"
-
-    "Fill-Picture Mid-Banner Mid-Banner Mid-Banner Mid-Banner Fill-Picture-2"
-
-    ". Services Services Services Services ."
-
-    "Reviews Reviews Reviews Reviews Reviews Reviews"
-
-    "Area-Map Area-Map Area-Map Area-Map Area-Map Area-Map"
-    "Footer Footer Footer Footer Footer Footer"
-   
+    "hero hero hero hero hero hero"
+    "barber barber cut-like-pros cut-like-pros location location"
+    "fill-Picture-1 secondary-about secondary-about secondary-about secondary-about fill-Picture-2"
+    "mid-banner mid-banner mid-banner mid-banner mid-banner mid-banner"
+    "article services services services services article-2"
+    "article reviews reviews reviews reviews article-2"
+    "article footer footer footer footer article-2";
 }
 
-.Hero {
-  grid-area: Hero;
-  background-image: url(/images/hero.jpg);
-  background-size: cover;
-  width: 100%;
-  height: 80vh;
-  background-position: center;
+.hero {
+  grid-area: hero;
+}
+
+.fill-Picture-1 {
+  grid-area: fill-Picture-1;
+}
+
+.fill-Picture-2 {
+  grid-area: fill-Picture-2;
+}
+
+.secondary-about {
+  grid-area: secondary-about;
+}
+
+.mid-banner {
+  grid-area: mid-banner;
+}
+
+.services {
+  grid-area: services;
+}
+
+.article {
+  grid-area: article;
+}
+
+.article-2 {
+  grid-area: article-2;
+}
+
+.reviews {
+  grid-area: reviews;
+}
+
+.footer {
+  grid-area: footer;
 }
 
 .barber {
-  grid-area: Barber;
-  background: var(--light-brown);
-  height: 30em;
-  width: 100%;
-  align-content: center;
-  display: grid
-  }
-
-.barber-text {
-  place-items: center;
-  text-align: center;
-}  
-
-
-
-.Cut-Like-Pros {
-  grid-area: Cut-Like-Pros;
-  background: var(--lightest-slate);
-  height: 30em;
-  width: 100%;
-  align-content: center;
-  display: grid
+  grid-area: barber;
 }
 
-.Cut-Like-Pros-text {
-  place-items: center;
-  text-align: center;
-  padding: 2em;
+.cut-like-pros {
+  grid-area: cut-like-pros;
 }
 
-.Location {
-  grid-area: Location;
-  background: var(--light-brown);
-  height: 30em;
-  width: 100%;
-  align-content: center;
-  display: grid
+.location {
+  grid-area: location;
 }
 
-.Location-text {
-  place-items: center;
-  text-align: center;
-  padding: 1em;
-}
+/* ——————————————————————————————————-
+              HERO
+————————————————————————————————————— */
 
-.Fill-Picture {
-  grid-area: Fill-Picture;
-  background-image: url(/images/fill-picture1.jpg);
-  background-size: cover;
+.hero {
+  background-image: url(/images/hero.jpg);
   background-position: center;
-  grid-row: 3 / 5;
+  background-size: cover;
+  height: 70vh;
 }
 
-.Mid-Banner {
-  grid-area: Mid-Banner;
-  background: yellow;
-  align-content: center;
-  display: grid
-}
+/* ——————————————————————————————————-
+          ABOUT TOP SECTION
+————————————————————————————————————— */
 
-.Fill-Picture-2 {
-  grid-area: Fill-Picture-2;
-  background: #96875b;
-  align-content: center;
+.barber,
+.location {
+  background: var(--lightest-orange);
   display: grid;
+  place-items: center;
   height: 50vh;
 }
 
-.Services {
-  grid-area: Services;
-  align-content: center;
-  background: var(--light-slate);
-  padding: 4em 0;
-}
-
-.Services h1 {
-  text-align: center;
-  padding: 2em;
-}
-
-.services-sub-grid {
+.cut-like-pros {
+  background: var(--white);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  width: 100%;
+  place-items: center;
+  height: 50vh;
 }
 
-.wet-shave-sub-grid-text {
-  grid-column: 1 / 2 ;
-  place-items: center;
-  padding: 1em;
+.barber-text,
+.location-text p,
+h2 {
   text-align: center;
 }
 
-.haircut-sub-grid-text {
-  grid-column: 2 / 3 ;
-  place-items: center;
-  padding: 1em;
+.cut-like-pros-text h2,
+p {
   text-align: center;
 }
 
-.beard-sub-grid-text {
-  grid-column: 3 / 4 ;
-  place-items: center;
-  padding: 1em;
-  text-align: center;
+/* ——————————————————————————————————-
+     FILL PICTURE 1
+————————————————————————————————————— */
+
+.fill-Picture-1 {
+  background: url(/images/fill-picture1.jpg);
 }
 
-
-
-
-.Reviews {
-  grid-area: Reviews;
-  background: purple;
-  align-content: center;
-  display: grid
+/* ——————————————————————————————————-
+     FILL PICTURE 2
+————————————————————————————————————— */
+.fill-Picture-2 {
+  background: url(/images/fill-picture2.jpg);
 }
-
-.Area-Map {
-  grid-area: Area-Map;
-  background: olive;
-  align-content: center;
-  display: grid
-}
-
-.Footer {
-  grid-area: Footer;
-  background: pink;
-  align-content: center;
-  display: grid
-}
-
-
-
-
-
-
 
 /* ——————————————————————————————————-
      MEDIA QUERIES - MOBILE DEVICES
 ————————————————————————————————————— */
 
-
-
 /* ------- Navigation Menu ------- */
 
-@media screen and (max-width:900px){
-	ul.nav-menu{
-		position:absolute;
-		top:50px;
-		width:100%;
-		height:0;
-		padding:0;
-		overflow:hidden;
-	}
-	ul.nav-menu.active{
-		height:auto;
-	}
-	ul.nav-menu li{
-		width:100%;
-	}
-	ul.nav-menu li a{
-		width:100%;
-		padding:20px 0;
-		text-align:center;
-		background-color: var(--white); /* background of toggle menu */
-	}
-	ul.nav-menu li a:hover{
-		background-color:var(--white);
-	}
-	.nav-toggle{
-		display:block;
-	}
+@media screen and (max-width: 900px) {
+  ul.nav-menu {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  ul.nav-menu.active {
+    height: auto;
+  }
+  ul.nav-menu li {
+    width: 100%;
+  }
+  ul.nav-menu li a {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: var(--white); /* background of toggle menu */
+  }
+  ul.nav-menu li a:hover {
+    background-color: var(--white);
+  }
+  .nav-toggle {
+    display: block;
+  }
 }
-@media screen and (max-width:768px){
-	.nav-overlay.active{
-		visibility:hidden;
-		opacity:0;
-	}
+@media screen and (max-width: 768px) {
+  .nav-overlay.active {
+    visibility: hidden;
+    opacity: 0;
+  }
 
-
-
-/* ------- Grid Container ------- */
-
-.container {
-  display: block;
+  .container {
+    display: block;
+  }
 }
-
-.services-sub-grid {
-  display: block;
-}
-
-
-}
-
-
-
-
-
 
 /* ———————————————————————————————————————-
      MEDIA QUERIES - SMALL TABLET STYLES
 ——————————————————————————————————————————- */
 
-@media screen and (min-width:800px) {
-    
-    
+@media screen and (min-width: 800px) {
 }
-
-
-
-
-
 
 /* ———————————————————————————————————————-
      MEDIA QUERIES - LARGE TABLETS & LAPTOP  STYLES
 ——————————————————————————————————————————- */
 
-@media screen and (min-width:1100px) {
-    
-    
+@media screen and (min-width: 1100px) {
 }
