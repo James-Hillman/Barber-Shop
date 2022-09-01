@@ -5,10 +5,10 @@
   --lightest-navy: #233554;
   --darkest-brown: rgba(12, 10, 1, 0.7);
   --dark-slate: #495670;
-  --gold: #b9a56e;
+  --gold: #cabd9a;
   --gold2: #96875b;
   --light-slate: #a8b2d1;
-  --lightest-orange: #a57743;
+  --lightest-orange: #c3b19d;
   --medium-orange: #a36724;
   --white: #e6f1ff;
   --black: black;
@@ -28,7 +28,7 @@
   --font-md: 1.4em;
   --font-lg: 1.8em;
   --font-xl: 2.8em;
-  --font-xxl: 4em;
+  --font-xxl: 5em;
 }
 
 /* ——————————————————————————————
@@ -60,9 +60,7 @@ nav.navigation {
   z-index: 9998;
   background: var(--white);
 }
-.nav-logo {
-  float: left;
-}
+
 ul.nav-menu,
 ul.nav-menu li,
 ul.nav-menu li a {
@@ -72,7 +70,7 @@ ul.nav-menu li a {
 }
 ul.nav-menu {
   padding-left: 10px;
-  padding-top: 50px;
+  padding-top: 1em;
 }
 ul.nav-menu li a {
   height: 50px;
@@ -174,113 +172,189 @@ span.icon-bar {
     "article footer footer footer footer article-2";
 }
 
-.hero {
-  grid-area: hero;
-}
-
-.fill-Picture-1 {
-  grid-area: fill-Picture-1;
-}
-
-.fill-Picture-2 {
-  grid-area: fill-Picture-2;
-}
-
-.secondary-about {
-  grid-area: secondary-about;
-}
-
-.mid-banner {
-  grid-area: mid-banner;
-}
-
-.services {
-  grid-area: services;
-}
-
-.article {
-  grid-area: article;
-}
-
-.article-2 {
-  grid-area: article-2;
-}
-
-.reviews {
-  grid-area: reviews;
-}
-
-.footer {
-  grid-area: footer;
-}
-
-.barber {
-  grid-area: barber;
-}
-
-.cut-like-pros {
-  grid-area: cut-like-pros;
-}
-
-.location {
-  grid-area: location;
-}
 
 /* ——————————————————————————————————-
               HERO
 ————————————————————————————————————— */
 
 .hero {
+  grid-area: hero;
   background-image: url(/images/hero.jpg);
   background-position: center;
   background-size: cover;
   height: 70vh;
+  display: grid;
+  place-content: center;
+}
+
+ .hero h1 {
+  color: var(--white);
+  font-size: var(--font-xxl);  
+  text-align: center;
+}
+
+.hero h3 {
+  color: var(--white);
+  font-size: var(--font-lg);
+  text-align: center;
 }
 
 /* ——————————————————————————————————-
           ABOUT TOP SECTION
 ————————————————————————————————————— */
 
-.barber,
-.location {
-  background: var(--lightest-orange);
+.barber {
+  grid-area: barber;
+  background: var(--dark-brown);
   display: grid;
   place-items: center;
-  height: 50vh;
+  height: 70vh;
+}
+
+.barber-text
+h2 {
+  text-align: center;
+  font-size: var(--font-lg);
+  padding: 1em;
+  color: var(--gold2);
+}
+
+.barber-text
+p {
+  text-align: center;
+  font-size: var(--font-md);
+  color: var(--white);
 }
 
 .cut-like-pros {
+  grid-area: cut-like-pros;
   background: var(--white);
   display: grid;
   place-items: center;
-  height: 50vh;
+  height: 70vh;
+  padding: 3em;
 }
 
-.barber-text,
-.location-text p,
-h2 {
+.cut-like-pros-text h2 {
   text-align: center;
+  font-size: var(--font-lg);
+  padding: 1em;
+  color: var(--gold2);
 }
 
-.cut-like-pros-text h2,
-p {
+.cut-like-pros-text p {
   text-align: center;
+  font-size: var(--font-md);
+  color: var(--dark-brown);
 }
+
+.location {
+  grid-area: location;
+  background: var(--dark-brown);
+  display: grid;
+  place-items: center;
+  height: 70vh;
+}
+
+.location-text h2
+{
+  text-align: center;
+  font-size: var(--font-lg);
+  padding: 1em;
+  color: var(--gold2);
+}
+
+.location-text p
+{
+  text-align: center;
+  font-size: var(--font-md);
+  color: var(--white);
+}
+
 
 /* ——————————————————————————————————-
-     FILL PICTURE 1
+          FILL PICTURE 1
 ————————————————————————————————————— */
 
 .fill-Picture-1 {
+  grid-area: fill-Picture-1;
   background: url(/images/fill-picture1.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: 0.8;
+  }
+
+
+/* ——————————————————————————————————-
+          FILL PICTURE 2
+————————————————————————————————————— */
+
+.fill-Picture-2 {
+  grid-area: fill-Picture-2;
+  background: url(/images/fill-picture2.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: 0.8;
 }
 
 /* ——————————————————————————————————-
-     FILL PICTURE 2
+          SECONDARY ABOUT 
 ————————————————————————————————————— */
-.fill-Picture-2 {
-  background: url(/images/fill-picture2.jpg);
+
+.secondary-about {
+  grid-area: secondary-about;
 }
+
+/* ——————————————————————————————————-
+          MID BANNER
+————————————————————————————————————— */
+
+.mid-banner {
+  grid-area: mid-banner;
+}
+
+/* ——————————————————————————————————-
+          SERVICES
+————————————————————————————————————— */
+
+.services {
+  grid-area: services;
+}
+
+/* ——————————————————————————————————-
+          ARTICLE
+————————————————————————————————————— */
+
+.article {
+  grid-area: article;
+}
+
+/* ——————————————————————————————————-
+          ARTICLE 2
+————————————————————————————————————— */
+
+.article-2 {
+  grid-area: article-2;
+}
+
+/* ——————————————————————————————————-
+          REVIEWS
+————————————————————————————————————— */
+
+.reviews {
+  grid-area: reviews;
+}
+
+/* ——————————————————————————————————-
+          FOOTER
+————————————————————————————————————— */
+
+.footer {
+  grid-area: footer;
+}
+
+
+
 
 /* ——————————————————————————————————-
      MEDIA QUERIES - MOBILE DEVICES
