@@ -397,7 +397,7 @@ span.icon-bar {
 .article {
   grid-area: article;
   height: fit-content;
-  background: var(--white);
+  background: var(--light-brown);
 }
 
 .opening-times {
@@ -407,13 +407,15 @@ span.icon-bar {
 
 .opening-times h2 {
   font-family: var(--font-Noto);
-  padding: 2em 0;
+  padding: 1em 0;
 }
 
 .opening-times ul, li {
   list-style: none;
   padding: 0.75em;
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--dark-brown);
+  font-family: var(--font-Noto);
 }
 
 /* ——————————————————————————————————-
@@ -484,6 +486,9 @@ span.icon-bar {
     height: 0;
     padding: 0;
     overflow: hidden;
+    background: var(--dark-brown);
+    backgroun
+    opacity: 0.9;
   }
   ul.nav-menu.active {
     height: auto;
@@ -496,7 +501,7 @@ span.icon-bar {
     padding: 10px 0;
     text-align: center;
     background-color: var(--dark-brown); /* background of toggle menu */
-    opacity: 0.8;
+    
     
   }
 
