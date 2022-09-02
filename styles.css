@@ -323,8 +323,8 @@ span.icon-bar {
   text-align: center;
   font-size: var(--font-smm);
   color: var(--gold2);
-  width: 100px;
-  line-height: 1.2;
+  width: 190px;
+  line-height: 2.5;
   font-weight: 100;
 }
 
@@ -431,7 +431,8 @@ span.icon-bar {
   background-position: center;
   background-size: cover;
   text-align: left;
-  
+  display: grid;
+  place-items: center;
 }
 
 .article-2 h2 {
@@ -439,7 +440,7 @@ span.icon-bar {
   text-align: center;
   padding: 1em;
   font-size: var(--font-lg);
-  margin-bottom: 2em;
+  
 }
 
 .article-2 a {
@@ -451,7 +452,6 @@ span.icon-bar {
 }
 
 .article-2 i {
-  padding-top: 2em;
   padding: 1em;
   color: var(--medium-orange);
   margin-left: 1em;
