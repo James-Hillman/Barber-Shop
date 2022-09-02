@@ -385,9 +385,6 @@ span.icon-bar {
 }
 
 
-#beard {
-  
-}
 
 /* ——————————————————————————————————-
           ARTICLE
@@ -395,6 +392,23 @@ span.icon-bar {
 
 .article {
   grid-area: article;
+  height: fit-content;
+  background: var(--white);
+}
+
+.opening-times {
+  text-align: center;
+  padding: 1em;
+}
+
+.opening-times h2 {
+  font-family: var(--font-Noto);
+  padding: 2em 0;
+}
+
+.opening-times ul, li {
+  list-style: none;
+  padding: 0.75em;
 }
 
 /* ——————————————————————————————————-
