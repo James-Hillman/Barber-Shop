@@ -64,9 +64,9 @@ p {
 
 nav.navigation {
   position: relative;
-  height: 2em;
+  height: 3em;
   width: 100%;
-  background: #1b2330;
+  background:var(--dark-brown);
   display: block;
 }
 
@@ -85,7 +85,7 @@ ul.nav-menu {
 }
 ul.nav-menu li a {
   padding: 0 10px;
-  color: var(--lightest-orange);
+  color: var(--white);
   text-decoration: none;
   -webkit-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
@@ -189,7 +189,7 @@ span.icon-bar {
 
 .hero {
   grid-area: hero;
-  background-image: url(images/hero.jpg);
+  background-image: linear-gradient( rgba(129, 146, 141, 0.4), rgba(48, 50, 58, 0.8) ), url(images/hero.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -199,7 +199,7 @@ span.icon-bar {
 
 .hero h1 {
   color: var(--white);
-  font-size: var(--font-lgx);
+  font-size: var(--font-xl);
   text-align: center;
 }
 
@@ -207,6 +207,22 @@ span.icon-bar {
   color: var(--white);
   font-size: var(--font-sm);
   text-align: center;
+}
+
+.hero-btn {
+  display: block;
+  margin: 0px auto;
+  margin-top: 4em;
+  background: transparent;
+  padding: 10px;
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.hero-btn a {
+  color: var(--white);
+  text-decoration: none;
 }
 
 /* ——————————————————————————————————-
@@ -335,12 +351,7 @@ span.icon-bar {
 ————————————————————————————————————— */
 
 .mid-banner {
-  grid-area: mid-banner;
-  height: 400px;
-  background-image: url(images/mid-banner.jpg);
-  background-position: center;
-  background-size: cover;
-  width: 100%;
+  
 }
 
 /* ——————————————————————————————————-
