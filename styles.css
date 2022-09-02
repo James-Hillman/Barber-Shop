@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 
 :root {
   --light-brown: #b4b3ad;
@@ -46,8 +46,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
-  
 }
 html,
 body {
@@ -66,13 +64,10 @@ p {
 
 nav.navigation {
   position: relative;
-  height: 5em;
-  align-items: center;
-  position: fixed;
+  height: 2em;
   width: 100%;
-  z-index: 9998;
-  background: var(--dark-brown);
-
+  background: #1b2330;
+  display: block;
 }
 
 ul.nav-menu,
@@ -80,16 +75,17 @@ ul.nav-menu li,
 ul.nav-menu li a {
   float: left;
   list-style: none;
-  align-items: center;
-  font-size: var(--font-sm);
+  font-size: var(--font-smm);
+  font-weight: 100;
+  font-family: var(--font-Noto);
 }
 ul.nav-menu {
   padding-left: 10px;
-  padding: 2em;
+  padding: 0em 2em;
 }
 ul.nav-menu li a {
   padding: 0 10px;
-  color: var(--white);
+  color: var(--lightest-orange);
   text-decoration: none;
   -webkit-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
@@ -222,7 +218,8 @@ span.icon-bar {
   background: var(--dark-brown);
   background-image: url("https://themes.muffingroup.com/be/barber2/wp-content/uploads/2016/06/home_barber2_box1.png");
   background-repeat: no-repeat;
-  background-position:  bottom; height: 600px;
+  background-position: bottom;
+  height: 600px;
   height: 100vh;
 }
 
@@ -235,8 +232,6 @@ span.icon-bar {
   margin-left: 60%;
   padding-top: 3em;
 }
-
-
 
 .barber-text .sub-header {
   color: var(--gold2);
@@ -252,7 +247,6 @@ span.icon-bar {
   font-weight: 100;
 }
 
-
 .cut-like-pros {
   grid-area: cut-like-pros;
   background: var(--white);
@@ -261,8 +255,6 @@ span.icon-bar {
   height: 100vh;
   padding: 1.5em;
 }
-
-
 
 #comb {
   display: block;
@@ -313,7 +305,6 @@ span.icon-bar {
   font-weight: 100;
 }
 
-
 /* ——————————————————————————————————-
           SECONDARY ABOUT 
 ————————————————————————————————————— */
@@ -326,27 +317,18 @@ span.icon-bar {
 }
 
 .secondary-about h2 {
-  font-size: var(--font-sm);
+  font-size: var(--font-md);
   text-transform: capitalize;
-  padding: 20px;
+  padding: 40px;
   text-align: center;
   color: var(--dark-brown);
   font-weight: bold;
-  
 }
-
-
 
 .subgrid img {
   height: auto;
   width: 100%;
 }
-
-
-
-
-
-
 
 /* ——————————————————————————————————-
           MID BANNER
@@ -367,7 +349,33 @@ span.icon-bar {
 
 .services {
   grid-area: services;
-  height: 500px;
+  height: fit-content;
+  background: var(--dark-brown);
+  text-align: center;
+}
+
+.services h1 {
+  font-family: var(--font-Noto);
+  color: var(--white);
+  padding: 40px 0;
+  font-size: var(--font-xl);
+}
+
+.services h2 {
+  font-family: var(--font-Noto);
+  color: var(--white);
+  padding: 1em 0;
+  font-size: var(--font-md);
+}
+
+.services p {
+  color: var(--gold);
+  padding: 3em 2em;
+}
+
+
+#beard {
+  
 }
 
 /* ——————————————————————————————————-
@@ -376,7 +384,6 @@ span.icon-bar {
 
 .article {
   grid-area: article;
- 
 }
 
 /* ——————————————————————————————————-
@@ -385,7 +392,6 @@ span.icon-bar {
 
 .article-2 {
   grid-area: article-2;
-  
 }
 
 /* ——————————————————————————————————-
@@ -432,6 +438,8 @@ span.icon-bar {
     padding: 10px 0;
     text-align: center;
     background-color: var(--dark-brown); /* background of toggle menu */
+    opacity: 0.8;
+    
   }
 
   .nav-toggle {
@@ -451,7 +459,6 @@ span.icon-bar {
   ul.nav-menu li a:hover {
     color: var(--gold2);
     opacity: 1;
-    
   }
 
   .secondary-about {
