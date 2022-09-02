@@ -29,7 +29,7 @@
   --font-xxs: 0.6em;
   --font-xs: 0.8em;
   --font-sm: 0.9em;
-  --font-smm: 1.2em;
+  --font-smm: 1em;
   --font-md: 1.4em;
   --font-ml: 1.6em;
   --font-lg: 1.8em;
@@ -54,6 +54,10 @@ body {
   scroll-behavior: smooth;
   font-family: var(--font-Lato);
   font-weight: 100;
+}
+
+p {
+  font-family: var(--font-Lato);
 }
 
 /* ——————————————————————————————
@@ -176,7 +180,7 @@ span.icon-bar {
   grid-template-areas:
     "hero hero hero hero hero hero"
     "barber barber cut-like-pros cut-like-pros location location"
-    "fill-Picture-1 secondary-about secondary-about secondary-about secondary-about fill-Picture-2"
+    "secondary-about secondary-about secondary-about secondary-about secondary-about secondary-about"
     "mid-banner mid-banner mid-banner mid-banner mid-banner mid-banner"
     "article services services services services article-2"
     "article reviews reviews reviews reviews article-2"
@@ -228,7 +232,7 @@ span.icon-bar {
   color: var(--white);
   font-family: var(--font-Noto);
   font-weight: 100;
-  margin-left: 40%;
+  margin-left: 60%;
   padding-top: 3em;
 }
 
@@ -240,11 +244,11 @@ span.icon-bar {
 
 .barber-text p {
   text-align: left;
-  font-size: var(--font-sm);
+  font-size: var(--font-smm);
   color: var(--light-brown);
   width: 100px;
   line-height: 1.2;
-  margin-left: 40%;
+  margin-left: 60%;
   font-weight: 100;
 }
 
@@ -276,7 +280,7 @@ span.icon-bar {
 
 .cut-like-pros-text p {
   text-align: center;
-  font-size: var(--font-sm);
+  font-size: var(--font-smm);
   color: var(--darkest-brown);
   padding: 0em 2em;
   line-height: 1.5;
@@ -302,36 +306,13 @@ span.icon-bar {
 
 .location-text p {
   text-align: center;
-  font-size: var(--font-sm);
+  font-size: var(--font-smm);
   color: var(--gold2);
   width: 100px;
   line-height: 1.2;
   font-weight: 100;
 }
 
-/* ——————————————————————————————————-
-          FILL PICTURE 1
-————————————————————————————————————— */
-
-.fill-Picture-1 {
-  grid-area: fill-Picture-1;
-  background: url(images/fill-picture1.jpg);
-  background-position: center;
-  background-size: cover;
-  opacity: 0.8;
-}
-
-/* ——————————————————————————————————-
-          FILL PICTURE 2
-————————————————————————————————————— */
-
-.fill-Picture-2 {
-  grid-area: fill-Picture-2;
-  background: url(images/fill-picture2.jpg);
-  background-position: center;
-  background-size: cover;
-  opacity: 0.8;
-}
 
 /* ——————————————————————————————————-
           SECONDARY ABOUT 
@@ -341,7 +322,7 @@ span.icon-bar {
   grid-area: secondary-about;
   height: 800px;
   background-color: var(--white);
-  
+  display: block;
 }
 
 .secondary-about h2 {
@@ -351,37 +332,21 @@ span.icon-bar {
   text-align: center;
   color: var(--dark-brown);
   font-weight: bold;
+  
 }
 
 
 
-.secondary-container-text img {
-  height: 30vh;
-  margin: auto;
-  display: block;
-  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.36);
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.36);
-  margin-bottom: 0em;
-  opacity: 0.8;
+.subgrid img {
+  height: auto;
+  width: 100%;
 }
 
 
 
 
 
-.secondary-container-text p {
-  padding: 1em;
-  margin: 2em 3em ;
-  text-align: center;
-  font-size: var(--font-sm);
-}
 
-.secondary-container-text-2 p {
-  padding: 3em;
-  margin-bottom: 3em;
-  text-align: center;
-  font-size: var(--font-sm);
-}
 
 /* ——————————————————————————————————-
           MID BANNER
