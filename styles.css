@@ -186,7 +186,7 @@ span.icon-bar {
 
 .hero {
   grid-area: hero;
-  background-image: url(/images/hero.jpg);
+  background-image: url(images/hero.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -280,7 +280,7 @@ span.icon-bar {
 
 .fill-Picture-1 {
   grid-area: fill-Picture-1;
-  background: url(/images/fill-picture1.jpg);
+  background: url(images/fill-picture1.jpg);
   background-position: center;
   background-size: cover;
   opacity: 0.8;
@@ -292,7 +292,7 @@ span.icon-bar {
 
 .fill-Picture-2 {
   grid-area: fill-Picture-2;
-  background: url(/images/fill-picture2.jpg);
+  background: url(images/fill-picture2.jpg);
   background-position: center;
   background-size: cover;
   opacity: 0.8;
@@ -354,7 +354,7 @@ span.icon-bar {
 .mid-banner {
   grid-area: mid-banner;
   height: 400px;
-  background-image: url(/images/mid-banner.jpg);
+  background-image: url(images/mid-banner.jpg);
   background-position: center;
   background-size: cover;
   width: 100%;
