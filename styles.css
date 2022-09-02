@@ -462,8 +462,49 @@ span.icon-bar {
 
 .reviews {
   grid-area: reviews;
-  height: 500px;
+  height:fit-content;
+  background: var(--dark-brown);
+  width: 100%;
+  padding: 2em;
 }
+
+.reviews h1 {
+  text-transform: capitalize;
+  text-align: center;
+  padding: 0.9em;
+  color: var(--light-brown);
+  font-size: var(--font-lg);
+}
+
+.review-1,
+.review-2,
+.review-3
+{
+  padding: 1em;
+}
+
+.review-1,
+.review-2,
+.review-3, h2 {
+  font-size: var(--font-sm);
+  color: var(--medium-orange);
+}
+
+.review-1,
+.review-2,
+.review-3, q {
+  color: var(--white);
+  line-height: 1.5;
+}
+
+.review-1,
+.review-2,
+.review-3, :checked {
+  color: var(--gold);
+  padding: 1em;
+}
+
+
 
 /* ——————————————————————————————————-
           FOOTER
