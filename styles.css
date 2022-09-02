@@ -396,7 +396,7 @@ span.icon-bar {
 
 .article {
   grid-area: article;
-  height: 100vh;
+  height: fit-content;
   background: var(--white);
 }
 
