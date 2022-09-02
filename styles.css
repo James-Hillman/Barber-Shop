@@ -11,6 +11,7 @@
   --dark-slate: #495670;
   --gold: #CABD9A;
   --gold2: #e3a650cb;
+  --gold3: #ffebd0cb;
   --light-slate: #a8b2d1;
   --lightest-orange: #c3b19d;
   --medium-orange: #a36724;
@@ -425,15 +426,16 @@ span.icon-bar {
 .article-2 {
   grid-area: article-2;
   height: 100vh;
-  background: var(--dark-brown);
+  background-image: linear-gradient( rgba(129, 146, 141, 0.6), rgba(48, 50, 58, 0.6) ), url(images/contact-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align: center;
   padding: 4.5em 0em;
-  display: block;
-  margin: 0px auto;
 }
 
 .article-2 h2 {
-  color: var(--gold);
+  color: var(--white);
   text-align: center;
   padding: 1em;
   font-size: var(--font-lg);
@@ -442,7 +444,7 @@ span.icon-bar {
 .article-2 a {
   text-decoration: none;
   padding: 1em;
-  color: var(--light-brown);
+  color: var(--gold3);
   font-size: var(--font-smm);
   font-family: var(--font-Lato);
 }
