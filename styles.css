@@ -425,7 +425,7 @@ span.icon-bar {
   height: 100vh;
   background: var(--dark-brown);
   text-align: center;
-  padding: 7em 0em;
+  padding: 5em 0em;
   display: block;
   margin: 0px auto;
 }
@@ -433,15 +433,15 @@ span.icon-bar {
 .article-2 h2 {
   color: var(--gold);
   text-align: center;
-  padding: 1em 1em 2em 1em;
-  font-size: var(--font-md);
+  padding: 1em;
+  font-size: var(--font-lg);
 }
 
 .article-2 a {
   text-decoration: none;
   padding: 1em;
   color: var(--light-brown);
-  font-size: var(--font-sm);
+  font-size: var(--font-smm);
   font-family: var(--font-Lato);
 }
 
