@@ -398,7 +398,7 @@ span.icon-bar {
 .article {
   grid-area: article;
   height: fit-content;
-  background: var(--light-brown);
+  background: var(--white);
 }
 
 .opening-times {
