@@ -9,7 +9,7 @@
   --lightest-navy: #233554;
   --darkest-brown: rgba(24, 24, 23, 0.7);
   --dark-slate: #495670;
-  --gold: #cabd9a;
+  --gold: #CABD9A;
   --gold2: #e3a650cb;
   --light-slate: #a8b2d1;
   --lightest-orange: #c3b19d;
@@ -303,6 +303,12 @@ span.icon-bar {
   height: 100vh;
 }
 
+#location-icon {
+  display: block;
+  margin: 0px auto;
+  margin-bottom: 1em;
+}
+
 .location-text h2 {
   text-align: center;
   font-size: var(--font-md);
@@ -350,9 +356,7 @@ span.icon-bar {
           MID BANNER
 ————————————————————————————————————— */
 
-.mid-banner {
-  
-}
+
 
 /* ——————————————————————————————————-
           SERVICES
