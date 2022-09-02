@@ -430,8 +430,8 @@ span.icon-bar {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  text-align: center;
-  padding: 4.5em 0em;
+  text-align: left;
+  
 }
 
 .article-2 h2 {
@@ -439,6 +439,7 @@ span.icon-bar {
   text-align: center;
   padding: 1em;
   font-size: var(--font-lg);
+  margin-bottom: 2em;
 }
 
 .article-2 a {
@@ -450,8 +451,11 @@ span.icon-bar {
 }
 
 .article-2 i {
+  padding-top: 2em;
   padding: 1em;
   color: var(--medium-orange);
+  margin-left: 1em;
+  
 } 
 
 
@@ -499,10 +503,12 @@ span.icon-bar {
 
 .review-1,
 .review-2,
-.review-3, :checked {
+.review-3, span:checked {
   color: var(--gold);
   padding: 1em;
 }
+
+
 
 
 
