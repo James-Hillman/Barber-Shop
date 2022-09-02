@@ -246,8 +246,9 @@ span.icon-bar {
   color: var(--white);
   font-family: var(--font-Noto);
   font-weight: 100;
-  margin-left: 60%;
-  padding-top: 3em;
+  margin-left: 40%;
+  padding-top: 20%;
+  
 }
 
 .barber-text .sub-header {
@@ -258,10 +259,11 @@ span.icon-bar {
   text-align: left;
   font-size: var(--font-smm);
   color: var(--light-brown);
-  width: 100px;
+  width: 170px;
   line-height: 1.2;
-  margin-left: 60%;
+  margin-left: 40%;
   font-weight: 100;
+  
 }
 
 .cut-like-pros {
@@ -430,7 +432,7 @@ span.icon-bar {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  text-align: left;
+  text-align: center;
   display: grid;
   place-items: center;
 }
@@ -470,6 +472,9 @@ span.icon-bar {
   background: var(--dark-brown);
   width: 100%;
   padding: 2em;
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
 .reviews h1 {
@@ -536,7 +541,6 @@ span.icon-bar {
     padding: 0;
     overflow: hidden;
     background: var(--dark-brown);
-    backgroun
     opacity: 0.9;
   }
   ul.nav-menu.active {
