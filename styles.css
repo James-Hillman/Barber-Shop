@@ -1,19 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 :root {
   --light-brown: #b4b3ad;
   --med-brown: #4d4726;
   --dark-brown: #383735;
   --lightest-navy: #233554;
-  --darkest-brown: rgba(12, 10, 1, 0.7);
+  --darkest-brown: rgba(24, 24, 23, 0.7);
   --dark-slate: #495670;
   --gold: #cabd9a;
-  --gold2: #96875b;
+  --gold2: #e3a650cb;
   --light-slate: #a8b2d1;
   --lightest-orange: #c3b19d;
   --medium-orange: #a36724;
-  --white: #e6f1ff;
+  --white: #ffffff;
   --black: black;
 
   /* ——————————————————————————————
@@ -27,7 +28,7 @@
   --font-Lato: "Lato", sans-serif;
   --font-xxs: 0.6em;
   --font-xs: 0.8em;
-  --font-sm: 1em;
+  --font-sm: 0.9em;
   --font-smm: 1.2em;
   --font-md: 1.4em;
   --font-ml: 1.6em;
@@ -45,11 +46,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: var(--font-Noto);
+
+  
 }
 html,
 body {
   scroll-behavior: smooth;
+  font-family: var(--font-Lato);
+  font-weight: 100;
 }
 
 /* ——————————————————————————————
@@ -63,7 +67,7 @@ nav.navigation {
   position: fixed;
   width: 100%;
   z-index: 9998;
-  background: var(--gold);
+  background: var(--dark-brown);
 
 }
 
@@ -73,16 +77,15 @@ ul.nav-menu li a {
   float: left;
   list-style: none;
   align-items: center;
-  font-size: var(--font-smm);
-
+  font-size: var(--font-sm);
 }
 ul.nav-menu {
   padding-left: 10px;
-  padding-top: 10px;
+  padding: 2em;
 }
 ul.nav-menu li a {
   padding: 0 10px;
-  color: var(--black);
+  color: var(--white);
   text-decoration: none;
   -webkit-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
@@ -107,7 +110,7 @@ span.icon-bar {
   display: block;
   width: 26px;
   height: 2px;
-  background-color: black;
+  background-color: var(--gold2);
   -webkit-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
@@ -127,7 +130,7 @@ span.icon-bar {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: var(--gold);
+  background-color: var(--white);
   z-index: 1;
   opacity: 0;
   visibility: hidden;
@@ -213,44 +216,71 @@ span.icon-bar {
 .barber {
   grid-area: barber;
   background: var(--dark-brown);
-  display: grid;
-  place-items: center;
-  height: 70vh;
+  background-image: url("https://themes.muffingroup.com/be/barber2/wp-content/uploads/2016/06/home_barber2_box1.png");
+  background-repeat: no-repeat;
+  background-position:  bottom; height: 600px;
+  height: 100vh;
 }
 
 .barber-text h2 {
-  text-align: center;
+  text-align: left;
   font-size: var(--font-md);
-  padding: 1em;
+  color: var(--white);
+  font-family: var(--font-Noto);
+  font-weight: 100;
+  margin-left: 40%;
+  padding-top: 3em;
+}
+
+
+
+.barber-text .sub-header {
   color: var(--gold2);
 }
 
 .barber-text p {
-  text-align: center;
+  text-align: left;
   font-size: var(--font-sm);
-  color: var(--white);
+  color: var(--light-brown);
+  width: 100px;
+  line-height: 1.2;
+  margin-left: 40%;
+  font-weight: 100;
 }
+
 
 .cut-like-pros {
   grid-area: cut-like-pros;
   background: var(--white);
   display: grid;
   place-items: center;
-  height: 70vh;
-  padding: 1em;
+  height: 100vh;
+  padding: 1.5em;
+}
+
+
+
+#comb {
+  display: block;
+  margin: 0 auto;
 }
 
 .cut-like-pros-text h2 {
   text-align: center;
   font-size: var(--font-md);
   padding: 1em;
-  color: var(--gold2);
+  color: var(--black);
+  font-family: var(--font-Noto);
+  font-weight: 100;
 }
 
 .cut-like-pros-text p {
   text-align: center;
   font-size: var(--font-sm);
-  color: var(--dark-brown);
+  color: var(--darkest-brown);
+  padding: 0em 2em;
+  line-height: 1.5;
+  font-weight: 500;
 }
 
 .location {
@@ -258,20 +288,25 @@ span.icon-bar {
   background: var(--dark-brown);
   display: grid;
   place-items: center;
-  height: 70vh;
+  height: 100vh;
 }
 
 .location-text h2 {
   text-align: center;
   font-size: var(--font-md);
-  padding: 1em;
-  color: var(--gold2);
+  padding-bottom: 1em;
+  color: var(--white);
+  font-weight: 100;
+  font-family: var(--font-Noto);
 }
 
 .location-text p {
   text-align: center;
   font-size: var(--font-sm);
-  color: var(--white);
+  color: var(--gold2);
+  width: 100px;
+  line-height: 1.2;
+  font-weight: 100;
 }
 
 /* ——————————————————————————————————-
@@ -305,7 +340,7 @@ span.icon-bar {
 .secondary-about {
   grid-area: secondary-about;
   height: 800px;
-  background-color: var(--gold);
+  background-color: var(--white);
   
 }
 
@@ -327,6 +362,7 @@ span.icon-bar {
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.36);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.36);
   margin-bottom: 0em;
+  opacity: 0.8;
 }
 
 
