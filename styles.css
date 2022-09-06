@@ -170,6 +170,7 @@ span.icon-bar {
 
 .container {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr);
   gap: 0px 0px;
@@ -178,7 +179,6 @@ span.icon-bar {
     "hero hero hero hero hero hero"
     "barber barber cut-like-pros cut-like-pros location location"
     "secondary-about secondary-about secondary-about secondary-about secondary-about secondary-about"
-    "mid-banner mid-banner mid-banner mid-banner mid-banner mid-banner"
     "article services services services services article-2"
     "article reviews reviews reviews reviews article-2"
     "article footer footer footer footer article-2";
@@ -339,15 +339,15 @@ span.icon-bar {
 
 .secondary-about {
   grid-area: secondary-about;
-
   background-color: var(--white);
   display: block;
+  
 }
 
 .secondary-about h2 {
   font-size: var(--font-md);
   text-transform: capitalize;
-  padding: 2.25em;
+  padding: 1em;
   text-align: center;
   color: var(--dark-brown);
   font-weight: bold;
@@ -358,9 +358,6 @@ span.icon-bar {
   width: 100%;
 }
 
-/* ——————————————————————————————————-
-          MID BANNER
-————————————————————————————————————— */
 
 
 
@@ -373,6 +370,7 @@ span.icon-bar {
   height: fit-content;
   background: var(--dark-brown);
   text-align: center;
+  width: 100%;
 }
 
 .services h1 {
@@ -393,7 +391,6 @@ span.icon-bar {
   color: var(--gold);
   padding: 3em 2em;
 }
-
 
 
 /* ——————————————————————————————————-
@@ -818,7 +815,7 @@ font-size: var(--font-xxs);
 
 .secondary-about h2 {
   font-size: var(--font-xl);
-  padding: 3em;
+  padding: 1em;
   color: var(--white);
 }
 
@@ -826,10 +823,20 @@ font-size: var(--font-xxs);
   display: grid;
   grid-template-columns: repeat(3, 1fr) ;
   grid-template-rows: 1fr 1fr 1fr;
- 
   padding: 0em 10em;
-  height: 100vh;
+  height: 80vh;
   gap: 1em;
+}
+
+.services-sub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+  margin:  0;
+}
+
+.article {
+  grid-column: 5 / 8;
 }
 
 
