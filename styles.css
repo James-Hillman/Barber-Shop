@@ -339,7 +339,7 @@ span.icon-bar {
 
 .secondary-about {
   grid-area: secondary-about;
-  height: 800px;
+
   background-color: var(--white);
   display: block;
 }
@@ -811,9 +811,26 @@ font-size: var(--font-xxs);
   border-bottom: 1px solid var(--light-brown);
 }
 
+.secondary-about {
+  background-color: var(--dark-brown);
+  opacity: 0.9;
+}
+
 .secondary-about h2 {
   font-size: var(--font-xl);
-  padding: 4em;
+  padding: 3em;
+  color: var(--white);
 }
+
+.subgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) ;
+  grid-template-rows: 1fr 1fr 1fr;
+ 
+  padding: 0em 10em;
+  height: 100vh;
+  gap: 1em;
+}
+
 
 }
