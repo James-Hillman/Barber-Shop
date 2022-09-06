@@ -548,16 +548,10 @@ span.icon-bar {
 
 
 
-.container {
-  flex: 0 1 700px;
-  margin: auto;
-  padding: 10px;
-}
 
 .screen {
   position: relative;
   background: var(--dark-brown);
-  border-radius: 15px;
 }
 
 .screen:after {
@@ -577,8 +571,6 @@ span.icon-bar {
   align-items: center;
   padding: 10px 20px;
   background: var(--gold3);
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
 }
 
 
@@ -617,18 +609,10 @@ span.icon-bar {
 }
 
 .app-contact {
-  margin-top: auto;
   font-size: 0.5em;
   color: var(--gold2);
 }
 
-.app-form-group {
-  margin-bottom: 1em;
-}
-
-.app-form-group.message {
-  margin-top: 3em;
-}
 
 .app-form-group.buttons {
   margin-bottom: 0;
