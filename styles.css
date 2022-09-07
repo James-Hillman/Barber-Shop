@@ -6,6 +6,7 @@
   --light-brown: #b4b3ad;
   --med-brown: #4d4726;
   --dark-brown: #383735;
+  --lightest-brown: #cfcdc7;
   --lightest-navy: #233554;
   --darkest-brown: rgba(24, 24, 23, 0.7);
   --dark-slate: #495670;
@@ -257,12 +258,14 @@ span.icon-bar {
               BARBER
 ————————————————————————————————————— */
 
+.top-container {
+}
+
 .barber {
-  grid-area: barber;
   background: var(--dark-brown);
   background-image: url("https://themes.muffingroup.com/be/barber2/wp-content/uploads/2016/06/home_barber2_box1.png");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center bottom;
   height: 100vh;
 }
 
@@ -295,12 +298,12 @@ span.icon-bar {
 ————————————————————————————————————— */
 
 .cut-like-pros {
-  grid-area: cut-like-pros;
   background: var(--white);
-  display: grid;
   place-items: center;
   height: 100vh;
   padding: 1.5em;
+  display: grid;
+  place-items: center;
 }
 
 #comb {
@@ -331,7 +334,6 @@ span.icon-bar {
 ————————————————————————————————————— */
 
 .location {
-  grid-area: location;
   background: var(--dark-brown);
   display: grid;
   place-items: center;
@@ -366,7 +368,7 @@ span.icon-bar {
               HOW WE WORK
 ————————————————————————————————————— */
 
-.how-we-work h2 {
+.how-we-work {
   font-size: var(--font-md);
   text-transform: capitalize;
   padding: 1em;
@@ -682,34 +684,76 @@ span:checked {
 }
 
 @media screen and (max-width: 520px) {
-    .screen-body {
-      flex-direction: column;
-    }
-  
-    .screen-body-item.left {
-      margin-bottom: 30px;
-    }
-  
-    .app-title {
-      flex-direction: row;
-    }
-  
-    .app-title span {
-      margin-right: 12px;
-    }
-  
-    .app-title:after {
-      display: none;
-    }
+  .screen-body {
+    flex-direction: column;
   }
-  
-  @media screen and (max-width: 600px) {
-    .screen-body {
-      padding: 40px;
-    }
-  
-    .screen-body-item {
-      padding: 0;
-    }
+
+  .screen-body-item.left {
+    margin-bottom: 30px;
+  }
+
+  .app-title {
+    flex-direction: row;
+  }
+
+  .app-title span {
+    margin-right: 12px;
+  }
+
+  .app-title:after {
+    display: none;
+  }
 }
 
+@media screen and (max-width: 600px) {
+  .screen-body {
+    padding: 40px;
+  }
+
+  .screen-body-item {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .hero h1 {
+    font-size: var(--font-xxl);
+  }
+
+  .hero h3 {
+    font-size: var(--font-md);
+  }
+
+  .top-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .barber,
+  .cut-like-pros,
+  .location {
+    height: 70vh;
+  }
+
+  .barber-text h2 {
+    margin-left: 50%;
+  }
+  .barber-text p {
+    margin-left: 50%;
+  }
+  .how-we-work {
+    padding: 100px 0;
+    background: var(--lightest-brown);
+    font-size: var(--font-lgx);
+    background: var(--lightest-brown);
+  }
+
+ .work-subgrid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    opacity: 0.85;
+    gap: 10px;
+    padding: 10px 0;
+    
+ }
+}
