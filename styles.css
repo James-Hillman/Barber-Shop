@@ -499,6 +499,17 @@ li {
   height: fit-content;
 }
 
+.review-header {
+  background: var(--dark-brown);
+  height: 100px;
+  text-align: center;
+  text-transform: capitalize;
+  display: block;
+  margin: 0px auto;
+  padding: 30px 50px;
+  color: var(--white);
+}
+
 .reviews h1 {
   text-transform: capitalize;
   text-align: center;
@@ -606,7 +617,10 @@ span:checked {
 }
 
 .screen-body {
-  display: flex;
+  display: block;
+  width: 100%;
+  margin: 0px auto;
+  padding: 60px 0px;
 }
 
 .screen-body-item {
@@ -627,16 +641,6 @@ span:checked {
   font-size: 26px;
 }
 
-.app-title:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 25px;
-  height: 4px;
-  background: var(--gold);
-}
 
 .app-contact {
   font-size: 0.5em;
@@ -748,12 +752,95 @@ span:checked {
     background: var(--lightest-brown);
   }
 
- .work-subgrid {
+  .work-subgrid {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     opacity: 0.85;
     gap: 10px;
     padding: 10px 0;
-    
- }
+  }
+
+  .services-sub-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 50vh;
+    padding: 50px 100px;
+  }
+
+  .articles {
+    display: flex;
+    justify-content: space-between;
+    height: 70vh;
+  }
+  .article-1 h2 {
+    font-size: var(--font-xl);
+  }
+
+  .article-1 {
+    padding: 0px 70px;
+    display: grid;
+    place-items: center;
+    background: var(--lightest-brown);
+    font-size: var(--font-xs);
+  }
+
+  .article-2 {
+    padding: 0px 150px;
+    display: grid;
+    place-items: center;
+  }
+
+  .article-2 {
+    font-size: var(--font-lg);
+  }
+
+ 
+
+  .article-2 i {
+    display: block;
+    font-size: var(--font-xs);
+  }
+
+  .review-header {
+    background: var(--dark-brown);
+    height: 50px;
+    text-align: center;
+    display: grid;
+    place-items: center ;
+    text-transform: capitalize;
+    padding: 80px;
+  }
+
+  .reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+    align-items: center;
+  }
+
+  .review-1,
+  .review-2,
+  .review-3 {
+    width: 300px;
+    padding: 0px 0px 40px 0px;
+  }
+
+.app-contact {
+    padding: 10px;
+}
+
+  .screen-body-item.left {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .screen-body {
+    display: block;
+    width: 500px;
+    margin: 0px auto;
+    padding: 60px 0px;
+  }
+
+  
 }
