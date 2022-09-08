@@ -199,7 +199,7 @@ span.icon-bar {
     display: block;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .nav-overlay.active {
     visibility: hidden;
     opacity: 0;
@@ -265,7 +265,7 @@ span.icon-bar {
   background: var(--dark-brown);
   background-image: url("https://themes.muffingroup.com/be/barber2/wp-content/uploads/2016/06/home_barber2_box1.png");
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: bottom center;
   height: 100vh;
 }
 
@@ -641,7 +641,6 @@ span:checked {
   font-size: 26px;
 }
 
-
 .app-contact {
   font-size: 0.5em;
   color: var(--gold2);
@@ -719,6 +718,39 @@ span:checked {
   }
 }
 
+
+
+
+
+
+/* ——————————————————————————————
+      MEDIA QUERIES DESKTOP VIEW 1100px and ABOVE
+  —————————————————————————————— */
+
+  @media screen and (min-width: 778px) {
+  .barber,
+  .cut-like-pros,
+  .location {
+    height: 60vh;
+  }
+
+  .barber-text h2 {
+    margin-left: 60%;
+  }
+  .barber-text p {
+    margin-left: 60%;
+  }
+}
+
+
+
+
+
+
+/* ——————————————————————————————
+      MEDIA QUERIES DESKTOP VIEW 1100px and ABOVE
+  —————————————————————————————— */
+
 @media screen and (min-width: 1100px) {
   .hero h1 {
     font-size: var(--font-xxl);
@@ -794,8 +826,6 @@ span:checked {
     font-size: var(--font-lg);
   }
 
- 
-
   .article-2 i {
     display: block;
     font-size: var(--font-xs);
@@ -806,7 +836,7 @@ span:checked {
     height: 50px;
     text-align: center;
     display: grid;
-    place-items: center ;
+    place-items: center;
     text-transform: capitalize;
     padding: 80px;
   }
@@ -825,9 +855,9 @@ span:checked {
     padding: 0px 0px 40px 0px;
   }
 
-.app-contact {
+  .app-contact {
     padding: 10px;
-}
+  }
 
   .screen-body-item.left {
     display: flex;
@@ -841,6 +871,4 @@ span:checked {
     margin: 0px auto;
     padding: 60px 0px;
   }
-
-  
 }
