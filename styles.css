@@ -259,6 +259,7 @@ span.icon-bar {
 ————————————————————————————————————— */
 
 .top-container {
+  display: block;
 }
 
 .barber {
@@ -267,6 +268,8 @@ span.icon-bar {
   background-repeat: no-repeat;
   background-position: bottom center;
   height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
 .barber-text h2 {
@@ -275,8 +278,6 @@ span.icon-bar {
   color: var(--white);
   font-family: var(--font-Noto);
   font-weight: 100;
-  margin-left: 40%;
-  padding-top: 20%;
 }
 
 .barber-text .sub-header {
@@ -287,9 +288,8 @@ span.icon-bar {
   text-align: left;
   font-size: var(--font-smm);
   color: var(--light-brown);
-  width: 170px;
+  width: 140px;
   line-height: 1.2;
-  margin-left: 40%;
   font-weight: 100;
 }
 
@@ -389,99 +389,32 @@ span.icon-bar {
 
 .services {
   grid-area: services;
+  display: grid;
   height: fit-content;
-  background: var(--dark-brown);
+  background: var(--white);
   text-align: center;
   width: 100%;
 }
 
 .services-header {
   font-family: var(--font-Noto);
-  color: var(--white);
+  color: var(--dark-slate);
   padding: 40px 0;
   font-size: var(--font-xl);
   text-align: center;
-  background: var(--dark-brown);
+  background: var(--white);
 }
 
 .services h2 {
   font-family: var(--font-Noto);
-  color: var(--white);
+  color: var(--dark-slate);
   padding: 1em 0;
   font-size: var(--font-md);
 }
 
 .services p {
-  color: var(--gold);
-  padding: 3em 2em;
-}
-
-/* ——————————————————————————————————-
-              OPENING TIMES / ARTICLE
-————————————————————————————————————— */
-
-.articles {
-  height: fit-content;
-  background: var(--white);
-}
-
-.opening-times {
-  text-align: center;
-  padding: 1em;
-}
-
-.opening-times h2 {
-  font-family: var(--font-Noto);
-  padding: 1em 0;
-}
-
-.opening-times ul,
-li {
-  list-style: none;
-  padding: 0.75em;
-  font-weight: 100;
   color: var(--dark-brown);
-  font-family: var(--font-Noto);
-}
-
-/* ——————————————————————————————————-
-              ARTICLE 2
-————————————————————————————————————— */
-
-.article-2 {
-  grid-area: article-2;
-  height: 70vh;
-  background-image: linear-gradient(
-      rgba(129, 146, 141, 0.6),
-      rgba(48, 50, 58, 0.6)
-    ),
-    url(images/contact-image.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-  display: grid;
-  place-items: center;
-}
-
-.article-2 h2 {
-  color: var(--white);
-  text-align: center;
-  font-size: var(--font-lg);
-}
-
-.article-2 a {
-  text-decoration: none;
-  padding: 1em;
-  color: var(--gold3);
-  font-size: var(--font-smm);
-  font-family: var(--font-Lato);
-}
-
-.article-2 i {
-  padding: 1em;
-  color: var(--medium-orange);
-  margin-left: 1em;
+  padding: 1em 1em;
 }
 
 /* ——————————————————————————————————-
@@ -724,22 +657,67 @@ span:checked {
 
 
 /* ——————————————————————————————
-      MEDIA QUERIES DESKTOP VIEW 1100px and ABOVE
+      MEDIA QUERIES DESKTOP VIEW 800px and ABOVE
   —————————————————————————————— */
 
   @media screen and (min-width: 778px) {
+
+
+
   .barber,
   .cut-like-pros,
   .location {
-    height: 60vh;
+    height: 55vh;
   }
 
-  .barber-text h2 {
-    margin-left: 60%;
+ .barber {
+  background-position: bottom left;
+ }
+
+  .cut-like-pros,
+  .location,
+  .barber p {
+    font-size: var(--font-xs);
   }
-  .barber-text p {
-    margin-left: 60%;
-  }
+
+  .work-subgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.services-sub-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 30vh;
+  padding: 50px 50px;
+}
+
+.services-sub-grid h2 {
+  font-size: var(--font-sm);
+}
+.services-sub-grid p {
+  font-size: var(--font-xs);
+}
+
+
+.articles {
+  display: flex;
+ 
+}
+
+.article-1 {
+  width: 60%;
+}
+
+.screen-body-item {
+  width: 500px;
+  display: block;
+  margin: 0px auto;
+ }
+
+
+
 }
 
 
@@ -772,10 +750,7 @@ span:checked {
   }
 
   .barber-text h2 {
-    margin-left: 50%;
-  }
-  .barber-text p {
-    margin-left: 50%;
+    margin-top: 150px;
   }
   .how-we-work {
     padding: 100px 0;
@@ -792,11 +767,15 @@ span:checked {
     padding: 10px 0;
   }
 
+  .services {
+    height: 30vh;
+  }
+
   .services-sub-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     height: 50vh;
-    padding: 50px 100px;
+    padding: 50px 300px;
   }
 
   .articles {
@@ -855,6 +834,8 @@ span:checked {
     padding: 0px 0px 40px 0px;
   }
 
+ 
+
   .app-contact {
     padding: 10px;
   }
@@ -865,10 +846,5 @@ span:checked {
     gap: 30px;
   }
 
-  .screen-body {
-    display: block;
-    width: 500px;
-    margin: 0px auto;
-    padding: 60px 0px;
-  }
+
 }
